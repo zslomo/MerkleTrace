@@ -115,8 +115,23 @@ response:
 }
 ```
 **/getLastTime**: 获取商品最后一次提交的时间
+example:
+```
+{
+	"url": "http://10.141.211.59:8545",
+	"item_key": "0x1234567890"
+}
+```
+response:
+```
+{
+  "result": "2019.03.02"
+}
+```
 **/verify**: 验证商品真实性
+
 **/compute**: 计算Merkle树根
+
 
 
 
