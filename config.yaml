@@ -1,0 +1,42 @@
+contract:
+  abi:
+  - constant: false
+    inputs:
+    - {name: addr, type: string}
+    - {name: _name, type: string}
+    name: add_item
+    outputs:
+    - {name: '', type: bool}
+    payable: false
+    stateMutability: nonpayable
+    type: function
+  - constant: false
+    inputs:
+    - {name: addr, type: string}
+    name: query
+    outputs:
+    - {name: '', type: string}
+    payable: false
+    stateMutability: nonpayable
+    type: function
+  - constant: false
+    inputs:
+    - {name: addr, type: string}
+    - {name: input, type: string}
+    name: add_path
+    outputs:
+    - {name: '', type: bool}
+    payable: false
+    stateMutability: nonpayable
+    type: function
+  - constant: false
+    inputs: []
+    name: test
+    outputs:
+    - {name: '', type: string}
+    payable: false
+    stateMutability: nonpayable
+    type: function
+  address: '0xF379625e47fbe0Fa51aEe6773f3d8F1289Ba0c08'
+user59: {address: 0xEdf70Fd2a4DF9f81b7e101Bcb85C62d5b6EFB745, passwd: user1}
+user61: {address: 0x81d7890c83Ec777351eC7f3A881ddE7867234c7e, passwd: user2}
