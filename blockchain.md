@@ -1,3 +1,4 @@
+## 重新部署本地链
 rm -rf eth_data/*
 
 geth --datadir './eth_data' init genesis.json
@@ -7,11 +8,14 @@ geth \
 --datadir './eth_data' --port "30303" --rpcapi "db,eth,net,web3,personal,miner,admin,txpool,gasprice,shh,version" \
 --rpccorsdomain "*" console
 
+## 动态加入节点相关命令
 admin.nodeInfo
+
 admin.addPeer
+
 admin.peers
 
-
+## 创始区块
 genesis.json
 {
     "alloc": {},
@@ -32,10 +36,4 @@ genesis.json
     "timestamp": "0x00"
 }
 
-mkdir -p qdata/logs
-mkdir -p qdata/node1/keystore
-mkdir -p qdata/node1/geth
-mkdir -p qdata/node1/keys
 
-cd qdata/node1/keystore
-geth account new --keystore .
