@@ -14,13 +14,19 @@
 区块链 : Ethereum
 
 - python 3.6
+- solidity 0.4.8
 
-- requirements:
+- python requirements:
   - solc : 编译智能合约
   - flask : 后端框架
   - web3.py : 以太坊API
   - zxing : 二维码解析
   - qrcode : 二维码生成
+
+- JavaScript requirements
+  - Dropzone.js : 文件上传
+  - inspinia.js : UI
+  - bootstrap.js jquery-3.1.1.js : 基础模块
 
 ## 文件、模块说明
 web
@@ -52,7 +58,16 @@ MerkleTrace
 3.
 计算MerkleRoot这里采用了补齐操作，补齐的长度是 int(math.log(len(leaf_list), 2)) + 1.
 MerkleTree的叶子顺序会影响Root的值，这里用首次提交时间排序，所以**一定要先提交商品，再算MerkleRoot**
-
+## 网页端功能
+图片上传用Dropzone.js 实现，不过UI有点诡异，可能跟inspinia某些地方冲突了，图片缩略图是白的
+### 上传商品
+![upload](./image/upload.png)
+### 计算MerkleRoot
+![compute](./image/compute.png)
+### 查询
+![query](./image/query.png)
+### 验证
+![verify](./image/verify.png)
 ## API
 **/deployContract**: 部署合约
 
