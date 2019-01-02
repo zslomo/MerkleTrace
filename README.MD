@@ -29,9 +29,9 @@
   - bootstrap.js jquery-3.1.1.js : 基础模块
 
 ## 文件、模块说明
-###web
+### web
 - **index.html** : 前端页面
-###MerkleTrace
+### MerkleTrace
 - **config.yaml** : 存放用户名、合约地址等信息，会在合约部署的时候自动写入
 - **deploy_contract.py** : 专门用来部署合约的类
 - **MerkleTrace.py** :后端系统API
