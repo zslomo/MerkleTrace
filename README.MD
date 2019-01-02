@@ -8,11 +8,20 @@
 这一点很好解决，只要有一个单独节点一直启动挖矿就可以，开发环境这里因为怕产生过多区块，故没有这样做
 
 ## 环境 :
+前端 : HTML5（jQuery）+ Tomcat7
+
+后端 : Flask + Nginx + Gunicorn
+
+区块链 : Ethereum
+
 - python 3.6
+
 - requirements:
   - solc : 编译智能合约
   - flask : 后端框架
   - web3.py : 以太坊API
+  - zxing : 二维码解析
+
 ## 文件、模块说明
 - **config.yaml** : 存放用户名、合约地址等信息，会在合约部署的时候自动写入
 - **deploy_contract.py** : 专门用来部署合约的类
