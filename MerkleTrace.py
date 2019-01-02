@@ -1,20 +1,23 @@
 # coding=utf-8
 
 # API
+from query_utils import _verify, _compute
+
 __author__ = "Bin Tan"
-__date__ = "2017.11.6"
-
-import time
-
+__date__ = " 2018.12.28"
+import os
 from flask import Flask, jsonify, request
-
-from deploy_contract import Deploy
-from utils import login, get_contract, _get_path, _get_first_time, _get_last_time
 from flask_cors import CORS
+
 from MerkleTree import MerkleTree
+from bc_utils import _get_path, _get_first_time, \
+    _get_last_time, _add_path, _add_item
+from deploy_contract import Deploy
+from qr_utils import _qr_decode_one_file, _qr_decode_all_file
 app = Flask(__name__)
 # cross origin
 CORS(app, supports_credentials=True)
+CORS(app, resources=r'/*')
 
 @app.route('/deployContract', methods=['POST'])
 def deploy_contract():
@@ -45,32 +48,20 @@ def add_item():
     :param address: user address
     :param passwd: user passwd
     :param url: ethereum server url:port
-    :param item_key: item QRcode
+    :param img_file: item QRcode
     :param item_name: item name
     :return: json status
     '''
 
     values = request.get_json()
-    required = ['address', 'passwd', 'url', 'item_key', 'item_name']
+    required = ['address', 'passwd', 'url', 'img_file', 'item_name']
     if not all(k in values for k in required):
         return 'Missing values', 400
-    _item_name = values['item_name'] + '+'
-    print('login ethereum server...')
-    w3 = login(url=values['url'])
-    w3.personal.unlockAccount(values['address'], values['passwd'])
-    print('geting contract...')
-    contract_instance = get_contract(w3)
-    print('sending trasaction...')
-    tx_hash = contract_instance \
-        .functions \
-        .add_item(values['item_key'], _item_name) \
-        .transact({'from': values['address']})
-    print('start miner...')
-    w3.eth.defaultAccount = values['address']
-    w3.miner.start(10)
-    time.sleep(10)
-    w3.miner.stop()
-    tx_receipt = w3.eth.getTransactionReceipt(tx_hash)
+    tx_receipt = _add_item(address=values['address'],
+                           passwd=values['passwd'],
+                           url=values['url'],
+                           img_file=values['img_file'],
+                           item_name=values['item_name'])
     response = {'result': '{}'.format(tx_receipt)}
     return jsonify(response), 200
 
@@ -78,43 +69,23 @@ def add_item():
 @app.route('/addPath', methods=['POST'])
 def add_path():
     '''
-    :param address: user address
+    :paramimg_file: user img file
     :param passwd: user passwd
     :param url: ethereum server url:port
-    :param item_key: item QRcode
+    :param img_file: item QRcode
     :param item_path: item apth
     :return: json status
     '''
-
     values = request.get_json()
-    required = ['address', 'passwd', 'url', 'item_key', 'item_path']
+    required = ['address', 'passwd', 'url', 'img_file', 'item_name', 'item_path']
     if not all(k in values for k in required):
         return 'Missing values', 400
-    last_time = _get_last_time(values['url'],values['item_key'])
-    if time.strptime(last_time,'%Y-%m-%d  %H:%M:%S') > \
-        time.strptime(values['item_path']['time'],'%Y-%m-%d  %H:%M:%S'):
-        return 'time before last submit time', 500
-
-    _item_path = ';'.join([values['item_path']['time'],
-                           values['item_path']['node_name'],
-                           values['item_path']['location']]) \
-                 + '+'
-    print('login ethereum server...')
-    w3 = login(url=values['url'])
-    w3.personal.unlockAccount(values['address'], values['passwd'])
-    print('geting contract...')
-    contract_instance = get_contract(w3)
-    print('sending trasaction...')
-    tx_hash = contract_instance \
-        .functions \
-        .add_path(values['item_key'], _item_path) \
-        .transact({'from': values['address']})
-    print('start miner...')
-    w3.eth.defaultAccount = values['address']
-    w3.miner.start(10)
-    time.sleep(10)
-    w3.miner.stop()
-    tx_receipt = w3.eth.getTransactionReceipt(tx_hash)
+    tx_receipt = _add_path(address=values['address'],
+                           passwd=values['passwd'],
+                           url=values['url'],
+                           img_file=values['img_file'],
+                           item_name=values['item_name'],
+                           item_path=values['item_path'])
     response = {'result': "{}".format(tx_receipt)}
     return jsonify(response), 200
 
@@ -124,15 +95,16 @@ def get_path():
     '''
     get tiem path
     :param url: ethereum server url:port
-    :param item_key: item QRcode
+    :param img_file: item QRcode
     :return: json item path
     '''
 
     values = request.get_json()
-    required = ['url', 'item_key']
+    required = ['url', 'img_file']
     if not all(k in values for k in required):
         return 'Missing values', 400
-    ret = _get_path(values['url'], values['item_key'])
+    item_key = _qr_decode_one_file(values['img_file'])
+    ret = _get_path(values['url'], item_key)
     ret_list = ret.split('+')
     _item_name = ret_list[0]
     _item_path = ret_list[1:-1]
@@ -157,31 +129,35 @@ def get_path():
 def get_first_time():
     '''get item first submit time, for merkle sort
     :param url: ethereum server url:port
-    :param item_key: item QRcode
+    :param img_file: item QRcode
     :return: json first time
     '''
     values = request.get_json()
-    required = ['url', 'item_key']
+    required = ['url', 'img_file']
     if not all(k in values for k in required):
         return 'Missing values', 400
-    ret = _get_first_time(values['url'], values['item_key'])
+    item_key = _qr_decode_one_file(values['img_file'])
+    ret = _get_first_time(values['url'], item_key)
     response = {'result': ret}
     return jsonify(response), 200
+
 
 @app.route('/getLastTime', methods=['POST'])
 def get_last_time():
     '''get item last submit time, for merkle sort
     :param url: ethereum server url:port
-    :param item_key: item QRcode
+    :param img_file: item img file
     :return: json first time
     '''
     values = request.get_json()
-    required = ['url', 'item_key']
+    required = ['url', 'img_file']
     if not all(k in values for k in required):
         return 'Missing values', 400
-    ret = _get_last_time(values['url'], values['item_key'])
+    item_key = _qr_decode_one_file(values['img_file'])
+    ret = _get_last_time(values['url'], item_key)
     response = {'result': ret}
     return jsonify(response), 200
+
 
 @app.route('/verify', methods=['POST'])
 def verify():
@@ -192,15 +168,13 @@ def verify():
     :return: bool
     '''
     values = request.get_json()
-    required = ['url', 'leaf_list', 'MerkleRoot']
+    required = ['url', 'merkle_root_img']
     if not all(k in values for k in required):
         return 'Missing values', 400
-    merkleTree = MerkleTree()
-    ret = merkleTree.verify(_leaf_list=values['leaf_list'],
-                      url=values['leaf'],
-                      _MerkleRoot=values['MerkleRoot'])
+    ret = _verify(url=values['url'], merkle_root_img=values['merkle_root_img'])
     response = {'result': ret}
     return jsonify(response), 200
+
 
 @app.route('/compute', methods=['POST'])
 def compute():
@@ -210,13 +184,43 @@ def compute():
     :return: string Merkle Root
     '''
     values = request.get_json()
-    required = ['url', 'leaf_list']
+    required = ['url']
     if not all(k in values for k in required):
         return 'Missing values', 400
-    merkleTree = MerkleTree()
-    ret = merkleTree.compute(_leaf_list=values['leaf_list'], url=values['leaf'])
+    ret = _compute(values['url'])
     response = {'result': ret}
     return jsonify(response), 200
+
+@app.route('/leaf_upload', methods=['POST','GET'])
+def leaf_img_upload():
+    '''upload root
+    upload to './upload/'
+    :return: success
+    '''
+    img = request.files.get('file')
+    img.save('./upload/{}'.format(img.filename))
+
+    response = {'result': '{}'.format('success')}
+    return jsonify(response), 200
+
+@app.route('/root_upload', methods=['POST','GET'])
+def root_img_upload():
+    '''upload leaf
+    upload to './upload/root/'
+    :return: success
+    '''
+    img = request.files.get('file')
+    img.save('./upload/root/{}'.format(img.filename))
+
+    response = {'result': '{}'.format('success')}
+    return jsonify(response), 200
+@app.route('/delete',methods=['GET'])
+def delete_img():
+    list = os.walk('./upload')
+    for img_dir in list:
+        for img in img_dir[2]:
+            os.remove(os.path.join(img_dir[0], img))
+    return 200
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

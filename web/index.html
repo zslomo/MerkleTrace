@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>INSPINIA - Landing Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animation CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/plugins/dropzone/basic.css" rel="stylesheet">
+    <link href="css/plugins/dropzone/dropzone.css" rel="stylesheet">
+    <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+</head>
+<body id="page-top" class="landing-page no-skin-config">
+<div class="navbar-wrapper">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">MerkleTrace</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="page-scroll" href="#page-top">Home</a></li>
+                    <li><a class="page-scroll" href="#features">Features</a></li>
+                    <li><a class="page-scroll" href="#team">Team</a></li>
+                    <li><a class="page-scroll" href="#testimonials">Testimonials</a></li>
+                    <li><a class="page-scroll" href="#pricing">Pricing</a></li>
+                    <li><a class="page-scroll" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <div class="container">
+                <div class="carousel-caption text-center">
+                    <h1>MerkleTrace：Merkle Tree 防伪溯源系统<br/>
+                        </br>
+                        基于区块链技术和Merkel Tree 技术实现防伪溯源<br/>
+                        可追溯、不可篡改、低成本<br/>
+                        一站式解决链下数据上链难的问题</h1>
+                    <p>复旦大学 区块链工程实验室.</p>
+
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back one"></div>
+
+        </div>
+    </div>
+</div>
+
+
+<section id="features" class="container services">
+    <div class="row">
+        <div class="col-sm-3">
+            <h2>Full responsive</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
+                vehicula ut id elit. Morbi leo risus.</p>
+            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+        </div>
+        <div class="col-sm-3">
+            <h2>LESS/SASS Files</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
+                vehicula ut id elit. Morbi leo risus.</p>
+            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+        </div>
+        <div class="col-sm-3">
+            <h2>6 Charts Library</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
+                vehicula ut id elit. Morbi leo risus.</p>
+            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+        </div>
+        <div class="col-sm-3">
+            <h2>Advanced Forms</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
+                vehicula ut id elit. Morbi leo risus.</p>
+            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+        </div>
+    </div>
+</section>
+
+<section class="container features">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <div class="navy-line"></div>
+            <h1>上传商品信息<br/> <span class="navy"> upload item info</span></h1>
+            <!--<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>-->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 wrapper-content animated fadeIn">
+
+            <div class="col-lg-6 ">
+                <div class="col-lg-12 form-group"><label>商品名称</label> <input id="add_item_name" type="email"
+                                                                             placeholder="请输入商品名称"
+                                                                             class="form-control"></div>
+                <div class="col-lg-12 form-group"><label>处理时间</label> <input id="add_time" type="email"
+                                                                             placeholder="请输入商品处理时间"
+                                                                             class="form-control"></div>
+                <div class="col-lg-12 form-group"><label>公司名称</label> <input id="add_node_name" type="email"
+                                                                             placeholder="请输入公司名称"
+                                                                             class="form-control"></div>
+                <div class="col-lg-12 form-group"><label>处理地点</label> <input id="add_location" type="email"
+                                                                             placeholder="请输入处理地点"
+                                                                             class="form-control">
+                </div>
+
+            </div>
+            <div class="col-lg-6 ">
+                <div class="ibox">
+                    <div class="col-lg-12 text-center">
+                        <h5>上传商品二维码</h5>
+                    </div>
+                    <div class="ibox">
+
+                        <p>
+                        </p>
+
+                        <form action="#" class="dropzone" id="dropzoneForm">
+                            <div class="fallback">
+                                <input name="file" type="file" multiple/>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <button id="add_button" class="btn btn-primary text-center">提交</button>
+                    </div>
+                </div>
+            </div>
+        <p id="ret_1"></p>
+
+        </div>
+    </div>
+
+    </div>
+</section>
+
+
+<section id="contact" class="gray-section contact">
+    <div class="container">
+        <div class="row m-b-lg">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1>Contact Us</h1>
+                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+            </div>
+        </div>
+        <div class="row m-b-lg">
+            <div class="col-lg-3 col-lg-offset-3">
+                <address>
+                    <strong><span class="navy">Company name, Inc.</span></strong><br/>
+                    795 Folsom Ave, Suite 600<br/>
+                    San Francisco, CA 94107<br/>
+                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                </address>
+            </div>
+            <div class="col-lg-4">
+                <p class="text-color">
+                    Consectetur adipisicing elit. Aut eaque, totam corporis laboriosam veritatis quis ad perspiciatis,
+                    totam corporis laboriosam veritatis, consectetur adipisicing elit quos non quis ad perspiciatis,
+                    totam corporis ea,
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <a href="mailto:test@email.com" class="btn btn-primary">Send us mail</a>
+                <p class="m-t-sm">
+                    Or follow us on social platform
+                </p>
+                <ul class="list-inline social-icon">
+                    <li><a href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+                <p><strong>&copy; 2015 Company Name</strong><br/> consectetur adipisicing elit. Aut eaque, laboriosam
+                    veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mainly scripts -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.metisMenu.js"></script>
+<script src="js/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/pace.min.js"></script>
+<script src="js/wow.min.js"></script>
+<!-- Jasny -->
+<script src="js/jasny-bootstrap.min.js"></script>
+
+<!-- DROPZONE -->
+<script src="js/dropzone.js"></script>
+
+<script>
+    myDropzone = new Dropzone("#dropzoneForm");
+    $(document).ready(function () {
+
+        $('body').scrollspy({
+            target: '.navbar-fixed-top',
+            offset: 80
+        });
+
+        // Page scrolling feature
+        $('a.page-scroll').bind('click', function (event) {
+            var link = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $(link.attr('href')).offset().top - 50
+            }, 500);
+            event.preventDefault();
+            $("#navbar").collapse('hide');
+        });
+        $('#add_button').click(function (event) {
+            files = myDropzone.files;
+            if(files.length == 0){
+                alert('请上传QRcode!');
+                location.reload();
+            }
+            var add_item_name = document.getElementById("add_item_name").value;
+            var add_time = document.getElementById("add_time").value;
+            var add_node_name = document.getElementById("add_node_name").value;
+            var add_location = document.getElementById("add_node_name").value;
+            if(!add_item_name || !add_time || !add_node_name || !add_location){
+                alert('请输入表格数据！');
+                location.reload();
+            }
+            var ajax_data = {
+                "address": "0xEdf70Fd2a4DF9f81b7e101Bcb85C62d5b6EFB745",
+                "passwd": "user1",
+                "url": "http://10.141.211.59:8545",
+                "img_file": files[0].name,
+                "item_name": add_item_name,
+                "item_path": {
+                    "time": add_time,
+                    "node_name": add_node_name,
+                    "location": add_location
+                }
+            };
+            $.ajax({
+                type: "POST",
+                url: "http://10.141.211.59:5000",
+                data: ajax_data,
+                dataType: "json",
+                async: true,
+                success: function (result) {
+                    document.getElementById("ret_1").innerHTML = result['result'];
+                }
+            });
+        });
+
+    });
+
+
+    // Activate WOW.js plugin for animation on scrol
+    new WOW().init();
+
+</script>
+<!--Dropzone-->
+<script>
+    Dropzone.options.dropzoneForm = {
+        paramName: "file", // The name that will be used to transfer the file
+        maxFilesize: 2, // MB
+        dictDefaultMessage: "<strong>Drop files here or click to upload. </strong>",
+        url: "http://10.141.211.59:5000/leaf_img_upload",
+        addRemoveLinks: true,
+        method: 'post',
+        filesizeBase: 1024,
+        parallelUploads: 100
+    };
+
+</script>
+</body>
+</html>

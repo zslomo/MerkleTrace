@@ -39,13 +39,14 @@ response:
 }
 ```
 **/addItem**: 添加新的商品
+***基本弃置，现在/addPath会做一次检查，如果是第一次加入自动调用_add_item***
 example :
 ```
 {
 	"address": "0xEdf70Fd2a4DF9f81b7e101Bcb85C62d5b6EFB745",
 	"passwd": "user1",
 	"url": "http://10.141.211.59:8545",
-	"item_key": "0x1234567890",
+	"img_file": img_file_name,
 	"item_name": "apple"
 }
 ```
@@ -62,7 +63,7 @@ example :
 	"address": "0xEdf70Fd2a4DF9f81b7e101Bcb85C62d5b6EFB745",
 	"passwd": "user1",
 	"url": "http://10.141.211.59:8545",
-	"item_key": "0x1234567890",
+	"img_file": img_file_name,
 	"item_path": {
 		"time": "2019.01.02",
 		"node_name":"pekingU",
@@ -81,7 +82,7 @@ example :
 ```
 {
 	"url": "http://10.141.211.59:8545",
-	"item_key": "0x1234567890"
+	"img_file": img_file_name
 }
 ```
 response:
@@ -109,7 +110,7 @@ example:
 ```
 {
 	"url": "http://10.141.211.59:8545",
-	"item_key": "0x1234567890"
+	"img_file": img_file_name
 }
 ```
 response:
@@ -123,7 +124,7 @@ example:
 ```
 {
 	"url": "http://10.141.211.59:8545",
-	"item_key": "0x1234567890"
+	"img_file": img_file_name
 }
 ```
 response:
@@ -133,9 +134,33 @@ response:
 }
 ```
 **/verify**: 验证商品真实性
+example:
+```
+{
+	"url": "http://10.141.211.59:8545",
+	"root_img_file": img_file_name
+}
+```
+response:
+```
+{
+  "result": True
+}
+```
 
 **/compute**: 计算Merkle树根
-
+example:
+```
+{
+	"url": "http://10.141.211.59:8545"
+}
+```
+response:
+```
+{
+  "result": "0x1234567890"
+}
+```
 
 
 
@@ -147,8 +172,8 @@ response:
 | 链测试 | ✔️ |
 | 后端搭建 | ✔️ |
 | 后端测试 | ✔️ |
-| MerkleTree 算法 | ✔ |
-| 前端 | |
+| MerkleTree 算法 | ✔️ |
+| 前端 | 30% |
 
 
 
