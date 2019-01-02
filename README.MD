@@ -59,7 +59,7 @@ example :
 response:
 ```
 {
-  "result": "contract address is 0x6F906dE4596B1A57a9040B65a28F6da640B16e9a"
+    "result": "contract address is 0x6F906dE4596B1A57a9040B65a28F6da640B16e9a"
 }
 ```
 **/addItem**: 添加新的商品
@@ -69,17 +69,17 @@ response:
 example :
 ```
 {
-	"address": "0xEdf70Fd2a4DF9f81b7e101Bcb85C62d5b6EFB745",
-	"passwd": "user1",
-	"url": "http://10.141.211.59:8545",
-	"img_file": <img_file_name>,
-	"item_name": "apple"
+    "address": "0xEdf70Fd2a4DF9f81b7e101Bcb85C62d5b6EFB745",
+    "passwd": "user1",
+    "url": "http://10.141.211.59:8545",
+    "img_file": <img_file_name>,
+    "item_name": "apple"
 }
 ```
 response:
 ```
 {
-  "result": "AttributeDict({'blockHash': HexBytes('0xe236c25db907f1f25653f1fc38da83c8bc176eaea8d42a307f9e981b64826952'), 'blockNumber': 232, 'contractAddress': None, 'cumulativeGasUsed': 44934, 'from': '0xedf70fd2a4df9f81b7e101bcb85c62d5b6efb745', 'gasUsed': 44934, 'logs': [], 'logsBloom': HexBytes('0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'), 'root': '0x3f1c8c14610894b4b46b5671ed1bb3394e325055c219b2e15c2b0141edea8ebd', 'to': '0x6f906de4596b1a57a9040b65a28f6da640b16e9a', 'transactionHash': HexBytes('0x40da1fe4b716e61ca362341e2418b33cf3eea06c3620bcbd3f5c24aadaf36680'), 'transactionIndex': 0})"
+    "result": "AttributeDict({'blockHash': HexBytes('0xe236c25db907f1f25653f1fc38da83c8bc176eaea8d42a307f9e981b64826952'), 'blockNumber': 232, 'contractAddress': None, 'cumulativeGasUsed': 44934, 'from': '0xedf70fd2a4df9f81b7e101bcb85c62d5b6efb745', 'gasUsed': 44934, 'logs': [], 'logsBloom': HexBytes('0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'), 'root': '0x3f1c8c14610894b4b46b5671ed1bb3394e325055c219b2e15c2b0141edea8ebd', 'to': '0x6f906de4596b1a57a9040b65a28f6da640b16e9a', 'transactionHash': HexBytes('0x40da1fe4b716e61ca362341e2418b33cf3eea06c3620bcbd3f5c24aadaf36680'), 'transactionIndex': 0})"
 }
 ```
 **/addPath**:
@@ -113,28 +113,27 @@ example :
 
 ```
 {
-	"url": "http://10.141.211.59:8545",
+    "url": "http://10.141.211.59:8545",
 	"img_file": <img_file_name>
 }
 ```
 response:
 ```
 {
-  "result": {
-    "item_name": "apple",
-    "iterm_path": [
-      {
-        "location": "beijing",
-        "node_name": "pekingU",
-        "time": "2019.01.02"
-      },
-      {
-        "location": "sahngahi",
-        "node_name": "fudan",
-        "time": "2019.01.03"
-      }
-    ]
-  }
+	"result": {
+		"item_name": "apple",
+		"iterm_path": [{
+				"location": "beijing",
+				"node_name": "pekingU",
+				"time": "2019.01.02"
+			},
+			{
+				"location": "sahngahi",
+				"node_name": "fudan",
+				"time": "2019.01.03"
+			}
+		]
+	}
 }
 ```
 **/getFirstTime**: 获取商品第一次提交的时间
@@ -150,7 +149,7 @@ example:
 response:
 ```
 {
-  "result": "2019.01.02"
+    "result": "2019.01.02"
 }
 ```
 **/getLastTime**: 获取商品最后一次提交的时间
@@ -166,7 +165,7 @@ example:
 response:
 ```
 {
-  "result": "2019.03.02"
+    "result": "2019.03.02"
 }
 ```
 **/verify**: 验证商品真实性
@@ -182,7 +181,7 @@ example:
 response:
 ```
 {
-  "result": True
+    "result": True
 }
 ```
 
@@ -199,7 +198,7 @@ response:
 
 ```
 {
-  "result": "0x1234567890"
+    "result": "0x1234567890"
 }
 ```
 
