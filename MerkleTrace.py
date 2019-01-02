@@ -6,10 +6,10 @@ from query_utils import _verify, _compute
 __author__ = "Bin Tan"
 __date__ = " 2018.12.28"
 import os
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_file
 from flask_cors import CORS
-
-from MerkleTree import MerkleTree
+import qrcode
+from io import BytesIO
 from bc_utils import _get_path, _get_first_time, \
     _get_last_time, _add_path, _add_item
 from deploy_contract import Deploy
@@ -119,8 +119,9 @@ def get_path():
         item_path.append(dic)
     ret = {
         'item_name': _item_name,
-        'iterm_path': item_path
+        'item_path': item_path
     }
+    print(ret)
     response = {'result': ret}
     return jsonify(response), 200
 
@@ -173,6 +174,7 @@ def verify():
         return 'Missing values', 400
     ret = _verify(url=values['url'], merkle_root_img=values['merkle_root_img'])
     response = {'result': ret}
+    print(response)
     return jsonify(response), 200
 
 
@@ -188,8 +190,10 @@ def compute():
     if not all(k in values for k in required):
         return 'Missing values', 400
     ret = _compute(values['url'])
-    response = {'result': ret}
-    return jsonify(response), 200
+    byte_io = BytesIO()
+    qrcode.make(ret).save(byte_io, 'PNG')
+    byte_io.seek(0)
+    return send_file(byte_io, mimetype='image/png')
 
 @app.route('/leaf_upload', methods=['POST','GET'])
 def leaf_img_upload():
@@ -219,8 +223,10 @@ def delete_img():
     list = os.walk('./upload')
     for img_dir in list:
         for img in img_dir[2]:
+            print('remove {}'.format(os.path.join(img_dir[0], img)))
             os.remove(os.path.join(img_dir[0], img))
-    return 200
+    response = {'result': '{}'.format('success')}
+    return jsonify(response), 200
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

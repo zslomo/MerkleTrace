@@ -9,9 +9,10 @@ def _qr_decode_one_file(img_file):
     :return: string decoded code
     '''
     reader = zxing.BarCodeReader()
-    print('./upload/{}'.format(img_file))
+    print('decode img {}...'.format(img_file))
     barcode = reader.decode('./upload/{}'.format(img_file))
     ret = barcode.parsed
+    print('root is {}'.format(ret))
     return ret
 
 def _qr_decode_all_file():
@@ -23,6 +24,7 @@ def _qr_decode_all_file():
     barcode_list = []
     qrcode_img_list = next(os.walk('upload'))[2]
     for qrcode_img in qrcode_img_list:
+        print('decode img {}...'.format(qrcode_img))
         barcode = reader.decode('./upload/{}'.format(qrcode_img))
         barcode_list.append(barcode.parsed)
     return barcode_list

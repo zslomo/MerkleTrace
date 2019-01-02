@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,285 +23,641 @@
     <link href="css/plugins/dropzone/dropzone.css" rel="stylesheet">
     <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body id="page-top" class="landing-page no-skin-config">
-<div class="navbar-wrapper">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">MerkleTrace</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a class="page-scroll" href="#page-top">Home</a></li>
-                    <li><a class="page-scroll" href="#features">Features</a></li>
-                    <li><a class="page-scroll" href="#team">Team</a></li>
-                    <li><a class="page-scroll" href="#testimonials">Testimonials</a></li>
-                    <li><a class="page-scroll" href="#pricing">Pricing</a></li>
-                    <li><a class="page-scroll" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</div>
-<div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
+    <div class="navbar-wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
-                <div class="carousel-caption text-center">
-                    <h1>MerkleTrace：Merkle Tree 防伪溯源系统<br/>
-                        </br>
-                        基于区块链技术和Merkel Tree 技术实现防伪溯源<br/>
-                        可追溯、不可篡改、低成本<br/>
-                        一站式解决链下数据上链难的问题</h1>
-                    <p>复旦大学 区块链工程实验室.</p>
-
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">MerkleTrace</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="page-scroll" href="#page-top">Home</a></li>
+                        <li><a class="page-scroll" href="#upload">Features</a></li>
+                        <li><a class="page-scroll" href="#compute">Team</a></li>
+                        <li><a class="page-scroll" href="#query">Testimonials</a></li>
+                        <li><a class="page-scroll" href="#verify">Pricing</a></li>
+                        <li><a class="page-scroll" href="#contact">Contact</a></li>
+                    </ul>
                 </div>
             </div>
-            <!-- Set background for slide in css -->
-            <div class="header-back one"></div>
-
-        </div>
+        </nav>
     </div>
-</div>
+    <div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="container">
+                    <div class="carousel-caption text-center">
+                        <h1>MerkleTrace：Merkle Tree 防伪溯源系统<br />
+                            </br>
+                            基于区块链技术和Merkel Tree 技术实现防伪溯源<br />
+                            可追溯、不可篡改、低成本<br />
+                            一站式解决链下数据上链难的问题</h1>
+                        <p>复旦大学 区块链工程实验室.</p>
 
-
-<section id="features" class="container services">
-    <div class="row">
-        <div class="col-sm-3">
-            <h2>Full responsive</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
-                vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-        </div>
-        <div class="col-sm-3">
-            <h2>LESS/SASS Files</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
-                vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-        </div>
-        <div class="col-sm-3">
-            <h2>6 Charts Library</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
-                vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-        </div>
-        <div class="col-sm-3">
-            <h2>Advanced Forms</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
-                vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-        </div>
-    </div>
-</section>
-
-<section class="container features">
-    <div class="row">
-        <div class="col-lg-12 text-center">
-            <div class="navy-line"></div>
-            <h1>上传商品信息<br/> <span class="navy"> upload item info</span></h1>
-            <!--<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>-->
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12 wrapper-content animated fadeIn">
-
-            <div class="col-lg-6 ">
-                <div class="col-lg-12 form-group"><label>商品名称</label> <input id="add_item_name" type="email"
-                                                                             placeholder="请输入商品名称"
-                                                                             class="form-control"></div>
-                <div class="col-lg-12 form-group"><label>处理时间</label> <input id="add_time" type="email"
-                                                                             placeholder="请输入商品处理时间"
-                                                                             class="form-control"></div>
-                <div class="col-lg-12 form-group"><label>公司名称</label> <input id="add_node_name" type="email"
-                                                                             placeholder="请输入公司名称"
-                                                                             class="form-control"></div>
-                <div class="col-lg-12 form-group"><label>处理地点</label> <input id="add_location" type="email"
-                                                                             placeholder="请输入处理地点"
-                                                                             class="form-control">
-                </div>
-
-            </div>
-            <div class="col-lg-6 ">
-                <div class="ibox">
-                    <div class="col-lg-12 text-center">
-                        <h5>上传商品二维码</h5>
-                    </div>
-                    <div class="ibox">
-
-                        <p>
-                        </p>
-
-                        <form action="#" class="dropzone" id="dropzoneForm">
-                            <div class="fallback">
-                                <input name="file" type="file" multiple/>
-                            </div>
-                        </form>
-
-                    </div>
-                    <div class="col-lg-12 text-center">
-                        <button id="add_button" class="btn btn-primary text-center">提交</button>
                     </div>
                 </div>
-            </div>
-        <p id="ret_1"></p>
+                <!-- Set background for slide in css -->
+                <div class="header-back one"></div>
 
+            </div>
         </div>
     </div>
 
-    </div>
-</section>
 
 
-<section id="contact" class="gray-section contact">
-    <div class="container">
-        <div class="row m-b-lg">
+
+    <section id="upload" class="container features">
+        <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="navy-line"></div>
-                <h1>Contact Us</h1>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+                <h1>上传商品信息<br /> <span class="navy"> upload item info</span></h1>
+                <!--<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>-->
             </div>
         </div>
-        <div class="row m-b-lg">
-            <div class="col-lg-3 col-lg-offset-3">
-                <address>
-                    <strong><span class="navy">Company name, Inc.</span></strong><br/>
-                    795 Folsom Ave, Suite 600<br/>
-                    San Francisco, CA 94107<br/>
-                    <abbr title="Phone">P:</abbr> (123) 456-7890
-                </address>
+        <div class="row">
+            <div class="col-lg-12 wrapper-content animated fadeIn">
+
+                <div class="col-lg-6 ">
+                    <div class="col-lg-12 form-group"><label>商品名称</label> <input id="add_item_name" type="email"
+                            placeholder="请输入商品名称" class="form-control"></div>
+                    <div class="col-lg-12 form-group"><label>处理时间</label> <input id="add_time" type="email" placeholder="请输入商品处理时间"
+                            class="form-control"></div>
+                    <div class="col-lg-12 form-group"><label>公司名称</label> <input id="add_node_name" type="email"
+                            placeholder="请输入公司名称" class="form-control"></div>
+                    <div class="col-lg-12 form-group"><label>处理地点</label> <input id="add_location" type="email"
+                            placeholder="请输入处理地点" class="form-control">
+                    </div>
+
+                </div>
+                <div class="col-lg-6 ">
+                    <div class="ibox">
+                        <div class="col-lg-12 text-center">
+                            <h5>上传商品二维码</h5>
+                        </div>
+                        <div class="ibox">
+
+                            <p>
+                            </p>
+
+                            <form action="#" class="dropzone" id="dropzoneForm">
+                                <div class="fallback">
+                                    <input name="file" type="file" multiple />
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="col-lg-12 text-center">
+                            <button id="add_button" class="btn btn-primary text-center">提交</button>
+                        </div>
+                    </div>
+                </div>
+                <p class="col-lg-12 text-center"> 交易详细数据</p>
+                <p id="ret_1" class="well col-lg-12"></p>
             </div>
-            <div class="col-lg-4">
-                <p class="text-color">
-                    Consectetur adipisicing elit. Aut eaque, totam corporis laboriosam veritatis quis ad perspiciatis,
-                    totam corporis laboriosam veritatis, consectetur adipisicing elit quos non quis ad perspiciatis,
-                    totam corporis ea,
-                </p>
-            </div>
+
         </div>
+        </div>
+
+        </div>
+    </section>
+    <section id="compute" class=" gray-section">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <a href="mailto:test@email.com" class="btn btn-primary">Send us mail</a>
-                <p class="m-t-sm">
-                    Or follow us on social platform
-                </p>
-                <ul class="list-inline social-icon">
-                    <li><a href="#"><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                    </li>
-                </ul>
+                <div class="navy-line"></div>
+                <h1>计算MerkleRoot<br /> <span class="navy"> compute Merkle Root </span></h1>
             </div>
         </div>
+        <div class="container ">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="ibox">
+                        <div class="col-lg-12 text-center">
+                            <h5>上传商品二维码，务必保证待计算商品都已提交到区块链！</h5>
+                        </div>
+                        <div class="ibox">
+
+                            <form action="#" class="dropzone" id="dropzoneFormCompute">
+                                <div class="fallback">
+                                    <input name="file" type="file" multiple />
+                                </div>
+                            </form>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 text-center wow zoomIn animated" style="visibility: visible;">
+                </div>
+                <div class="col-lg-4 text-center wow zoomIn animated" style="visibility: visible;">
+                    <div class="col-lg-12 text-center">
+                        <h5>MerkleRoot 二维码</h5>
+                    </div>
+                    </br>
+                    <img id="image" src="" width="100%" height="100%" class="img-responsive text-center">
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <button id="compute_button" class="btn btn-primary text-center">提交</button>
+                    </br></br>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </section>
+    <section id="query" class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
-                <p><strong>&copy; 2015 Company Name</strong><br/> consectetur adipisicing elit. Aut eaque, laboriosam
-                    veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1>查询<br /> <span class="navy"> query </span></h1>
+                <!--<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>-->
             </div>
         </div>
-    </div>
-</section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
 
-<!-- Mainly scripts -->
-<script src="js/jquery-3.1.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.metisMenu.js"></script>
-<script src="js/jquery.slimscroll.min.js"></script>
+                    <div class="ibox">
 
-<!-- Custom and plugin javascript -->
-<script src="js/inspinia.js"></script>
-<script src="js/pace.min.js"></script>
-<script src="js/wow.min.js"></script>
-<!-- Jasny -->
-<script src="js/jasny-bootstrap.min.js"></script>
+                        <div class="ibox">
 
-<!-- DROPZONE -->
-<script src="js/dropzone.js"></script>
+                            <form action="#" class="dropzone" id="dropzoneFormQury">
+                                <div class="fallback">
+                                    <input name="file" type="file" multiple />
+                                </div>
+                            </form>
 
-<script>
-    myDropzone = new Dropzone("#dropzoneForm");
-    $(document).ready(function () {
+                        </div>
+                        <div class="col-lg-12 text-center">
+                            <button id="qury_button" class="btn btn-primary text-center">提交</button>
+                        </div>
+                        </br></br></br>
+                    </div>
 
-        $('body').scrollspy({
-            target: '.navbar-fixed-top',
-            offset: 80
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>商品路径</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#">Config option 1</a>
+                                    </li>
+                                    <li><a href="#">Config option 2</a>
+                                    </li>
+                                </ul>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>公司名称</th>
+                                        <th>处理时间</th>
+                                        <th>处理地点</th>
+                                    </tr>
+                                </thead>
+                                <tbody id='tboy_1'>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="verify" class=" gray-section">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1>验证<br /> <span class="navy"> verify </span></h1>
+                <!--<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>-->
+            </div>
+        </div>
+        <div class="container ">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="ibox">
+                        <div class="col-lg-12 text-center">
+                            <h5>上传商品二维码</h5>
+                        </div>
+                        <div class="ibox">
+
+                            <form action="#" class="dropzone" id="dropzoneFormVerifyLeaf">
+                                <div class="fallback">
+                                    <input name="file" type="file" multiple />
+                                </div>
+                            </form>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="col-lg-6">
+
+                    <div class="ibox">
+                        <div class="col-lg-12 text-center">
+                            <h5>上传商品二维码</h5>
+                        </div>
+                        <div class="ibox">
+
+                            <form action="#" class="dropzone" id="dropzoneFormVerifyRoot">
+                                <div class="fallback">
+                                    <input name="file" type="file" multiple />
+                                </div>
+                            </form>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <button id="verify_button" class="btn btn-primary text-center">提交</button>
+                    </br></br>
+                </div>
+
+                <div id="verify_row" calss="col-lg-12 text-center">
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </section>
+    <section id="contact" class="container">
+        <div class="container">
+            <div class="row m-b-lg">
+                <div class="col-lg-12 text-center">
+                    <div class="navy-line"></div>
+                    <h1>联系我们</h1>
+                    <p>Contact Us</p>
+                </div>
+            </div>
+            <div class="col-lg-12 text-center">
+                <p>待加入</p>
+            </div>
+            <!-- <div class="row m-b-lg">
+                <div class="col-lg-3 col-lg-offset-3">
+                    <address>
+                        <strong><span class="navy">Company name, Inc.</span></strong><br />
+                        795 Folsom Ave, Suite 600<br />
+                        San Francisco, CA 94107<br />
+                        <abbr title="Phone">P:</abbr> (123) 456-7890
+                    </address>
+                </div>
+                <div class="col-lg-4">
+                    <p class="text-color">
+                        Consectetur adipisicing elit. Aut eaque, totam corporis laboriosam veritatis quis ad
+                        perspiciatis,
+                        totam corporis laboriosam veritatis, consectetur adipisicing elit quos non quis ad
+                        perspiciatis,
+                        totam corporis ea,
+                    </p>
+                </div>
+            </div> -->
+            <!-- <div class="row">
+                <div class="col-lg-12 text-center">
+                    <a href="mailto:test@email.com" class="btn btn-primary">Send us mail</a>
+                    <p class="m-t-sm">
+                        Or follow us on social platform
+                    </p>
+                    <ul class="list-inline social-icon">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+                    <p><strong>&copy; 2018 Fudan University</strong><br /></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.metisMenu.js"></script>
+    <script src="js/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/pace.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <!-- Jasny -->
+    <script src="js/jasny-bootstrap.min.js"></script>
+
+    <!-- DROPZONE -->
+    <script src="js/dropzone.js"></script>
+    <!-- 上传商品和添加商品路径 -->
+    <script>
+        dropzoneForm = new Dropzone("#dropzoneForm", {
+            paramName: "file", // The name that will be used to transfer the file
+            maxFiles: 1,
+            maxFilesize: 2, // MB
+            dictDefaultMessage: "<strong>请点击或拖动以上传商品二维码. </strong>",
+            url: "http://10.141.211.59:5000/leaf_upload",
+            addRemoveLinks: true,
+            method: 'post',
+            filesizeBase: 1024,
+            // parallelUploads: 100
+        });
+        $(document).ready(function () {
+
+            $('body').scrollspy({
+                target: '.navbar-fixed-top',
+                offset: 80
+            });
+
+            // Page scrolling feature
+            $('a.page-scroll').bind('click', function (event) {
+                var link = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: $(link.attr('href')).offset().top - 50
+                }, 500);
+                event.preventDefault();
+                $("#navbar").collapse('hide');
+            });
+
+            $('#add_button').click(function (event) {
+                document.getElementById("ret_1").innerHTML = "";
+                files = dropzoneForm.files;
+                if (files.length == 0) {
+                    alert('请上传QRcode!');
+                    location.reload();
+                }
+                var add_item_name = document.getElementById("add_item_name").value;
+                var add_time = document.getElementById("add_time").value;
+                var add_node_name = document.getElementById("add_node_name").value;
+                var add_location = document.getElementById("add_location").value;
+                if (!add_item_name || !add_time || !add_node_name || !add_location) {
+                    alert('请输入表格数据！');
+                    location.reload();
+                }
+                var ajax_data = JSON.stringify({
+                    "address": "0xEdf70Fd2a4DF9f81b7e101Bcb85C62d5b6EFB745",
+                    "passwd": "user1",
+                    "url": "http://10.141.211.59:8545",
+                    "img_file": files[0].name,
+                    "item_name": add_item_name,
+                    "item_path": {
+                        "time": add_time,
+                        "node_name": add_node_name,
+                        "location": add_location
+                    }
+                });
+                $.ajax({
+                    type: "POST",
+                    url: "http://10.141.211.59:5000/addPath",
+                    data: ajax_data,
+                    contentType: "application/json",
+                    dataType: "json",
+                    async: false,
+                    success: function (result) {
+                        dropzoneForm.removeAllFiles(true);
+                        document.getElementById("ret_1").innerHTML = result['result'];
+                    }
+                });
+                $.ajax({
+                    type: "GET",
+                    url: "http://10.141.211.59:5000/delete",
+                    data: ajax_data,
+                    contentType: "application/json",
+                    dataType: "json",
+                    async: false,
+                    success: function (result) {
+                    }
+                });
+            });
+
         });
 
-        // Page scrolling feature
-        $('a.page-scroll').bind('click', function (event) {
-            var link = $(this);
-            $('html, body').stop().animate({
-                scrollTop: $(link.attr('href')).offset().top - 50
-            }, 500);
-            event.preventDefault();
-            $("#navbar").collapse('hide');
+        // Activate WOW.js plugin for animation on scrol
+        new WOW().init();
+
+    </script>
+    <!-- 计算MerkleRoot -->
+    <script>
+        dropzoneFormCompute = new Dropzone("#dropzoneFormCompute", {
+            paramName: "file", // The name that will be used to transfer the file
+            maxFilesize: 2, // MB
+            dictDefaultMessage: "<strong>请点击或拖动以上传待计算商品二维码. </strong>",
+            url: "http://10.141.211.59:5000/leaf_upload",
+            addRemoveLinks: true,
+            method: 'post',
+            filesizeBase: 1024,
+            parallelUploads: 100
         });
-        $('#add_button').click(function (event) {
-            files = myDropzone.files;
-            if(files.length == 0){
-                alert('请上传QRcode!');
-                location.reload();
-            }
-            var add_item_name = document.getElementById("add_item_name").value;
-            var add_time = document.getElementById("add_time").value;
-            var add_node_name = document.getElementById("add_node_name").value;
-            var add_location = document.getElementById("add_node_name").value;
-            if(!add_item_name || !add_time || !add_node_name || !add_location){
-                alert('请输入表格数据！');
-                location.reload();
-            }
-            var ajax_data = {
-                "address": "0xEdf70Fd2a4DF9f81b7e101Bcb85C62d5b6EFB745",
-                "passwd": "user1",
-                "url": "http://10.141.211.59:8545",
-                "img_file": files[0].name,
-                "item_name": add_item_name,
-                "item_path": {
-                    "time": add_time,
-                    "node_name": add_node_name,
-                    "location": add_location
+
+        $(document).ready(function () {
+            $('#compute_button').click(function (event) {
+                document.getElementById("image").src = ""
+                files = dropzoneFormCompute.files;
+                if (files.length == 0) {
+                    alert('请上传QRcode!');
+                    location.reload();
                 }
-            };
-            $.ajax({
-                type: "POST",
-                url: "http://10.141.211.59:5000",
-                data: ajax_data,
-                dataType: "json",
-                async: true,
-                success: function (result) {
-                    document.getElementById("ret_1").innerHTML = result['result'];
+                var ajax_data = JSON.stringify({
+                    "url": "http://10.141.211.59:8545"
+                });
+                var url = "http://10.141.211.59:5000/compute";
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', url, true);
+                xhr.responseType = "blob";
+                xhr.setRequestHeader("Content-type", "application/json");
+                // xhr.setRequestHeader("desktop_web_access_key", _desktop_web_access_key);
+                xhr.onload = function () {
+                    if (this.status == 200) {
+                        var blob = this.response;
+                        src = window.URL.createObjectURL(blob);
+                        document.getElementById("image").src = src;
+                        dropzoneFormCompute.removeAllFiles(true);
+                        $.ajax({
+                            type: "GET",
+                            url: "http://10.141.211.59:5000/delete",
+                            data: ajax_data,
+                            contentType: "application/json",
+                            dataType: "json",
+                            async: false,
+                            success: function (result) {
+                            }
+                        });
+                    }
                 }
+                xhr.send(ajax_data);
+
+            });
+
+        });
+        // Activate WOW.js plugin for animation on scrol
+        new WOW().init();
+
+    </script>
+    <!-- 查询 -->
+    <script>
+        dropzoneFormQury = new Dropzone("#dropzoneFormQury", {
+            paramName: "file", // The name that will be used to transfer the file
+            maxFiles: 1,
+            maxFilesize: 2, // MB
+            dictDefaultMessage: "<strong>请点击或拖动以上传待查询商品二维码. </strong>",
+            url: "http://10.141.211.59:5000/leaf_upload",
+            addRemoveLinks: true,
+            method: 'post',
+            filesizeBase: 1024,
+            // parallelUploads: 100
+        });
+        $(document).ready(function () {
+            $('#qury_button').click(function (event) {
+                document.getElementById("tboy_1").innerHTML = "";
+                files = dropzoneFormQury.files;
+                if (files.length == 0) {
+                    alert('请上传QRcode!');
+                    location.reload();
+                }
+                var ajax_data = JSON.stringify({
+                    "url": "http://10.141.211.59:8545",
+                    "img_file": files[0].name
+                });
+                $.ajax({
+                    type: "POST",
+                    url: "http://10.141.211.59:5000/getPath",
+                    data: ajax_data,
+                    contentType: "application/json",
+                    dataType: "json",
+                    async: false,
+                    success: function (result) {
+                        dropzoneFormQury.removeAllFiles(true);
+                        ret = result['result']['item_path']
+                        if (ret.length == 0) {
+                            alert("商品不存在！")
+                        } else {
+                            for (var i = 0; i < ret.length; i++) {
+                                document.getElementById("tboy_1").innerHTML += "<tr>"
+                                    + "<td>" + i + "</td>"
+                                    + "<td>" + ret[i]['node_name'] + "</td>"
+                                    + "<td>" + ret[i]['time'] + "</td>"
+                                    + "<td>" + ret[i]['location'] + "</td>"
+                                    ;
+                            }
+                        }
+
+
+                    }
+                });
+                $.ajax({
+                    type: "GET",
+                    url: "http://10.141.211.59:5000/delete",
+                    data: ajax_data,
+                    contentType: "application/json",
+                    dataType: "json",
+                    async: false,
+                    success: function (result) {
+                    }
+                });
             });
         });
+    </script>
+    <!-- 验证 -->
+    <script>
+        dropzoneFormVerifyLeaf = new Dropzone("#dropzoneFormVerifyLeaf", {
+            paramName: "file", // The name that will be used to transfer the file
+            maxFilesize: 2, // MB
+            dictDefaultMessage: "<strong>请点击或拖动以上传待验证商品二维码. </strong>",
+            url: "http://10.141.211.59:5000/leaf_upload",
+            addRemoveLinks: true,
+            method: 'post',
+            filesizeBase: 1024,
+            parallelUploads: 100
+        });
+        dropzoneFormVerifyRoot = new Dropzone("#dropzoneFormVerifyRoot", {
+            paramName: "file", // The name that will be used to transfer the file
+            maxFiles: 1,
+            maxFilesize: 2, // MB
+            dictDefaultMessage: "<strong>请点击或拖动以上传待查询二维码. </strong>",
+            url: "http://10.141.211.59:5000/root_upload",
+            addRemoveLinks: true,
+            method: 'post',
+            filesizeBase: 1024,
+            // parallelUploads: 100
+        });
+        $(document).ready(function () {
+            $('#verify_button').click(function (event) {
+                document.getElementById("verify_row").innerHTML = "";
+                files = dropzoneFormVerifyRoot.files;
+                if (files.length == 0) {
+                    alert('请上传QRcode!');
+                    location.reload();
+                }
+                var ajax_data = JSON.stringify({
+                    "url": "http://10.141.211.59:8545",
+                    "merkle_root_img": files[0].name
+                });
+                $.ajax({
+                    type: "POST",
+                    url: "http://10.141.211.59:5000/verify",
+                    data: ajax_data,
+                    contentType: "application/json",
+                    dataType: "json",
+                    async: false,
+                    success: function (result) {
+                        dropzoneFormVerifyLeaf.removeAllFiles(true);
+                        dropzoneFormVerifyRoot.removeAllFiles(true);
+                        if (result['result'] == true) {
+                            document.getElementById("verify_row").innerHTML = "<h3 class=\"text-center\">恭喜！你的商品验证通过！</h3>";
+                        } else {
+                            document.getElementById("verify_row").innerHTML = "<h3 class=\"text-center\">你的商品未通过验证！</h3>";
+                        }
 
-    });
+                    }
+                });
+                $.ajax({
+                    type: "GET",
+                    url: "http://10.141.211.59:5000/delete",
+                    dataType: "json",
+                    async: false,
+                    success: function (result) {
+                    }
+                });
+            });
+        });
+    </script>
 
 
-    // Activate WOW.js plugin for animation on scrol
-    new WOW().init();
-
-</script>
-<!--Dropzone-->
-<script>
-    Dropzone.options.dropzoneForm = {
-        paramName: "file", // The name that will be used to transfer the file
-        maxFilesize: 2, // MB
-        dictDefaultMessage: "<strong>Drop files here or click to upload. </strong>",
-        url: "http://10.141.211.59:5000/leaf_img_upload",
-        addRemoveLinks: true,
-        method: 'post',
-        filesizeBase: 1024,
-        parallelUploads: 100
-    };
-
-</script>
 </body>
+
 </html>

@@ -24,26 +24,32 @@ class MerkleTree():
             first_time = _get_first_time(url=url,item_key=leaf)
             first_time = time.strptime(first_time, '%Y-%m-%d  %H:%M:%S')
             tmp = [first_time,leaf]
-            leaf_list.append([tmp])
+            leaf_list.append(tmp)
         # sort
         leaf_list.sort(key=lambda x:x[0])
-        leaf_list = [row[0] for row in leaf_list]
+        leaf_list = [row[1] for row in leaf_list]
+
         #fill the list
         new_length = 1 << int(math.log(len(leaf_list), 2)) + 1
         leaf_queue = Queue()
+        tmp_l = []
         for i in range(new_length):
             leaf_queue.put(leaf_list[i % len(leaf_list)])
-
+            tmp_l.append(leaf_list[i % len(leaf_list)])
         # compute Merkle Root
-        sha256 = hashlib.sha256()
+
         while not leaf_queue.qsize() == 1:
             first = leaf_queue.get()
             second = leaf_queue.get()
+            sha256 = hashlib.sha256()
+            print((first + second))
             sha256.update((first + second).encode('utf-8'))
             res = sha256.hexdigest()
-            # print(res)
+            print('sha----->{}'.format(res))
             leaf_queue.put(res)
-        return leaf_queue.get()
+        ret = leaf_queue.get()
+        print('compute MerkleRoot should be {}'.format(ret))
+        return ret
 
     def verify(self,_leaf_list, url, _MerkleRoot):
         '''verify item is real or not

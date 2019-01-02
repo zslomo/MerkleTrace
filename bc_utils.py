@@ -128,8 +128,8 @@ def _add_path(address, passwd, url, img_file, item_name, item_path):
         print('down')
     else:
         last_time = _get_last_time(url, item_key)
-        if time.strptime(last_time, '%Y-%m-%d  %H:%M:%S') > \
-                time.strptime(item_path['time'], '%Y-%m-%d  %H:%M:%S'):
+        if time.strptime(last_time, '%Y-%m-%d %H:%M:%S') > \
+                time.strptime(item_path['time'], '%Y-%m-%d %H:%M:%S'):
             return 'time before last submit time', 500
 
     _item_path = ';'.join([item_path['time'],
