@@ -24,7 +24,9 @@
 
 ## API
 **/deployContract**: 部署合约
+
 example :
+
 ```
 {
 	"address": "0xEdf70Fd2a4DF9f81b7e101Bcb85C62d5b6EFB745",
@@ -39,7 +41,9 @@ response:
 }
 ```
 **/addItem**: 添加新的商品
+
 ***基本弃置，现在/addPath会做一次检查，如果是第一次加入自动调用_add_item***
+
 example :
 ```
 {
@@ -56,8 +60,12 @@ response:
   "result": "AttributeDict({'blockHash': HexBytes('0xe236c25db907f1f25653f1fc38da83c8bc176eaea8d42a307f9e981b64826952'), 'blockNumber': 232, 'contractAddress': None, 'cumulativeGasUsed': 44934, 'from': '0xedf70fd2a4df9f81b7e101bcb85c62d5b6efb745', 'gasUsed': 44934, 'logs': [], 'logsBloom': HexBytes('0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'), 'root': '0x3f1c8c14610894b4b46b5671ed1bb3394e325055c219b2e15c2b0141edea8ebd', 'to': '0x6f906de4596b1a57a9040b65a28f6da640b16e9a', 'transactionHash': HexBytes('0x40da1fe4b716e61ca362341e2418b33cf3eea06c3620bcbd3f5c24aadaf36680'), 'transactionIndex': 0})"
 }
 ```
-**/addPath**: 在以存放商品中添加路径，请按时间顺序提交，last_time > submit_time 会报错
+**/addPath**:
+
+*在以存放商品中添加路径，请按时间顺序提交，last_time > submit_time 会报错*
+
 example :
+
 ```
 {
 	"address": "0xEdf70Fd2a4DF9f81b7e101Bcb85C62d5b6EFB745",
@@ -78,7 +86,9 @@ response:
 }
 ```
 **/getPath**: 获取商品的路径信息
+
 example :
+
 ```
 {
 	"url": "http://10.141.211.59:8545",
@@ -106,7 +116,9 @@ response:
 }
 ```
 **/getFirstTime**: 获取商品第一次提交的时间
+
 example:
+
 ```
 {
 	"url": "http://10.141.211.59:8545",
@@ -120,7 +132,9 @@ response:
 }
 ```
 **/getLastTime**: 获取商品最后一次提交的时间
+
 example:
+
 ```
 {
 	"url": "http://10.141.211.59:8545",
@@ -134,7 +148,9 @@ response:
 }
 ```
 **/verify**: 验证商品真实性
+
 example:
+
 ```
 {
 	"url": "http://10.141.211.59:8545",
@@ -149,13 +165,16 @@ response:
 ```
 
 **/compute**: 计算Merkle树根
+
 example:
+
 ```
 {
 	"url": "http://10.141.211.59:8545"
 }
 ```
 response:
+
 ```
 {
   "result": "0x1234567890"
