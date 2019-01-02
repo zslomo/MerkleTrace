@@ -33,8 +33,8 @@
       <file leaf-file-name="README.MD" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.MD">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="23" column="2" lean-forward="false" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+            <state relative-caret-position="352">
+              <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -123,6 +123,7 @@
       <find>img_file</find>
       <find>item_key</find>
       <find>_get_path</find>
+      <find>img_file_name</find>
     </findStrings>
     <replaceStrings>
       <replace>leaf_list</replace>
@@ -130,6 +131,7 @@
       <replace>:</replace>
       <replace>img_file</replace>
       <replace>img_file</replace>
+      <replace>&lt;img_file_name&gt;</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -704,8 +706,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.MD">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="2" lean-forward="false" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+        <state relative-caret-position="352">
+          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
           <folding />
         </state>
       </provider>

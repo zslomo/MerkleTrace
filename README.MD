@@ -28,8 +28,21 @@
 - **MerkleTrace.py** :后端系统API
 - **MerkleTrace.sol** :智能合约
 - **MerkleTree.py** :MerkleTree 计算类
-- **utils.py** :一些可复用的工具函数
+- **bc_utils.py qr_utils query_utils** :一些可复用的工具函数
 详见代码注释
+## 流程
+前端页面传入商品的二维码，并提交json格式的其它必要信息，数据由ajax传输。注意，图片拖拽即完成上传，无需提交按钮
+提交按钮实际上访问了两个API，一个是功能API，一个是/delete负责删除服务器上本次上传的所有图片
+后端会首先解析二维码得到item_key，然后进行后续操作，最终会统一删除'./upload'下所有单个文件
+
+前端传入的信息中，以下部分固定写死，即都通过59节点的用户0完成操作，实际上任何节点任何用户都可以，不过每一个节点应该运行自己的一个C/S服务器，
+所以对于每个前端，这部分本身就是固定的，并非由用户提供
+
+{
+    "address": "0xEdf70Fd2a4DF9f81b7e101Bcb85C62d5b6EFB745",
+    "passwd": "user1",
+    "url": "http://10.141.211.59:8545"
+}
 
 ## API
 **/deployContract**: 部署合约
@@ -59,7 +72,7 @@ example :
 	"address": "0xEdf70Fd2a4DF9f81b7e101Bcb85C62d5b6EFB745",
 	"passwd": "user1",
 	"url": "http://10.141.211.59:8545",
-	"img_file": img_file_name,
+	"img_file": <img_file_name>,
 	"item_name": "apple"
 }
 ```
@@ -80,7 +93,7 @@ example :
 	"address": "0xEdf70Fd2a4DF9f81b7e101Bcb85C62d5b6EFB745",
 	"passwd": "user1",
 	"url": "http://10.141.211.59:8545",
-	"img_file": img_file_name,
+	"img_file": <img_file_name>,
 	"item_path": {
 		"time": "2019.01.02",
 		"node_name":"pekingU",
@@ -101,7 +114,7 @@ example :
 ```
 {
 	"url": "http://10.141.211.59:8545",
-	"img_file": img_file_name
+	"img_file": <img_file_name>
 }
 ```
 response:
@@ -131,7 +144,7 @@ example:
 ```
 {
 	"url": "http://10.141.211.59:8545",
-	"img_file": img_file_name
+	"img_file": <img_file_name>
 }
 ```
 response:
@@ -147,7 +160,7 @@ example:
 ```
 {
 	"url": "http://10.141.211.59:8545",
-	"img_file": img_file_name
+	"img_file": <img_file_name>
 }
 ```
 response:
@@ -163,7 +176,7 @@ example:
 ```
 {
 	"url": "http://10.141.211.59:8545",
-	"root_img_file": img_file_name
+	"root_img_file": <img_file_name>
 }
 ```
 response:
