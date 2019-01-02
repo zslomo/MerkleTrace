@@ -196,7 +196,7 @@ example:
 response:
 
 ```
-blob file :imag
+blob file :image
 ```
 
 ## 问题
