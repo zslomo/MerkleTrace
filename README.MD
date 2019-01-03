@@ -1,5 +1,5 @@
 # 基于区块链和MerkleTree的防伪溯源系统
-![version](https://img.shields.io/badge/version-v1.0-blue.svg)
+![version](https://img.shields.io/badge/version-v1.0-blue.svg) ![build](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
 思路是利用MerkleTree，在子商品和父包装建立强相关性，加大防伪力度。
 
