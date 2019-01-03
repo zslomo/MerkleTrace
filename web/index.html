@@ -391,7 +391,7 @@
             maxFiles: 1,
             maxFilesize: 2, // MB
             dictDefaultMessage: "<strong>请点击或拖动以上传商品二维码. </strong>",
-            url: "http://10.141.211.59:5000/leaf_upload",
+            url: "http://10.141.211.59/leaf_upload",
             addRemoveLinks: true,
             method: 'post',
             filesizeBase: 1024,
@@ -443,7 +443,7 @@
                 });
                 $.ajax({
                     type: "POST",
-                    url: "http://10.141.211.59:5000/addPath",
+                    url: "http://10.141.211.59/addPath",
                     data: ajax_data,
                     contentType: "application/json",
                     dataType: "json",
@@ -455,7 +455,7 @@
                 });
                 $.ajax({
                     type: "GET",
-                    url: "http://10.141.211.59:5000/delete",
+                    url: "http://10.141.211.59/delete",
                     data: ajax_data,
                     contentType: "application/json",
                     dataType: "json",
@@ -477,7 +477,7 @@
             paramName: "file", // The name that will be used to transfer the file
             maxFilesize: 2, // MB
             dictDefaultMessage: "<strong>请点击或拖动以上传待计算商品二维码. </strong>",
-            url: "http://10.141.211.59:5000/leaf_upload",
+            url: "http://10.141.211.59/leaf_upload",
             addRemoveLinks: true,
             method: 'post',
             filesizeBase: 1024,
@@ -495,7 +495,7 @@
                 var ajax_data = JSON.stringify({
                     "url": "http://10.141.211.59:8545"
                 });
-                var url = "http://10.141.211.59:5000/compute";
+                var url = "http://10.141.211.59/compute";
                 var xhr = new XMLHttpRequest();
                 xhr.open('POST', url, true);
                 xhr.responseType = "blob";
@@ -509,7 +509,7 @@
                         dropzoneFormCompute.removeAllFiles(true);
                         $.ajax({
                             type: "GET",
-                            url: "http://10.141.211.59:5000/delete",
+                            url: "http://10.141.211.59/delete",
                             data: ajax_data,
                             contentType: "application/json",
                             dataType: "json",
@@ -535,7 +535,7 @@
             maxFiles: 1,
             maxFilesize: 2, // MB
             dictDefaultMessage: "<strong>请点击或拖动以上传待查询商品二维码. </strong>",
-            url: "http://10.141.211.59:5000/leaf_upload",
+            url: "http://10.141.211.59/leaf_upload",
             addRemoveLinks: true,
             method: 'post',
             filesizeBase: 1024,
@@ -555,7 +555,7 @@
                 });
                 $.ajax({
                     type: "POST",
-                    url: "http://10.141.211.59:5000/getPath",
+                    url: "http://10.141.211.59/getPath",
                     data: ajax_data,
                     contentType: "application/json",
                     dataType: "json",
@@ -581,7 +581,7 @@
                 });
                 $.ajax({
                     type: "GET",
-                    url: "http://10.141.211.59:5000/delete",
+                    url: "http://10.141.211.59/delete",
                     data: ajax_data,
                     contentType: "application/json",
                     dataType: "json",
@@ -598,7 +598,7 @@
             paramName: "file", // The name that will be used to transfer the file
             maxFilesize: 2, // MB
             dictDefaultMessage: "<strong>请点击或拖动以上传待验证商品二维码. </strong>",
-            url: "http://10.141.211.59:5000/leaf_upload",
+            url: "http://10.141.211.59/leaf_upload",
             addRemoveLinks: true,
             method: 'post',
             filesizeBase: 1024,
@@ -609,7 +609,7 @@
             maxFiles: 1,
             maxFilesize: 2, // MB
             dictDefaultMessage: "<strong>请点击或拖动以上传待查询二维码. </strong>",
-            url: "http://10.141.211.59:5000/root_upload",
+            url: "http://10.141.211.59/root_upload",
             addRemoveLinks: true,
             method: 'post',
             filesizeBase: 1024,
@@ -629,7 +629,7 @@
                 });
                 $.ajax({
                     type: "POST",
-                    url: "http://10.141.211.59:5000/verify",
+                    url: "http://10.141.211.59/verify",
                     data: ajax_data,
                     contentType: "application/json",
                     dataType: "json",
@@ -647,7 +647,7 @@
                 });
                 $.ajax({
                     type: "GET",
-                    url: "http://10.141.211.59:5000/delete",
+                    url: "http://10.141.211.59/delete",
                     dataType: "json",
                     async: false,
                     success: function (result) {

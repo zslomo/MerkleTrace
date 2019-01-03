@@ -19,6 +19,9 @@ app = Flask(__name__)
 CORS(app, supports_credentials=True)
 CORS(app, resources=r'/*')
 
+@app.route('/', methods=['GET'])
+def index():
+    return 'yeah buddy!'
 @app.route('/deployContract', methods=['POST'])
 def deploy_contract():
     '''deploy contract
@@ -229,4 +232,6 @@ def delete_img():
     return jsonify(response), 200
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    from werkzeug.contrib.fixers import ProxyFix
+    app.wsgi_app = ProxyFix(app.wsgi_app)
+    app.run()
