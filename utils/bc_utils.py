@@ -21,7 +21,7 @@ def get_contract(w3):
     :return: contract instance
     '''
 
-    with open('./config.yaml', 'r') as yaml_file:
+    with open('./config/config.yaml', 'r') as yaml_file:
         yaml_data = yaml.load(yaml_file)
 
     contract_instance = w3.eth.contract(

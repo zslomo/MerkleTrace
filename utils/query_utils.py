@@ -1,4 +1,4 @@
-from MerkleTreeRun import MerkleTree
+from src.MerkleTree import MerkleTree
 from utils.qr_utils import _qr_decode_all_file, _qr_decode_one_file
 
 
