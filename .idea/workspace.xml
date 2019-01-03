@@ -28,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.MD" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.MD" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.MD">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="36" column="23" lean-forward="false" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+            <state relative-caret-position="550">
+              <caret line="43" column="32" lean-forward="false" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -85,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deploy_contract.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="deploy_contract.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/deploy_contract.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="976">
-              <caret line="66" column="46" lean-forward="true" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="46" />
+            <state relative-caret-position="396">
+              <caret line="18" column="66" lean-forward="true" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
               <folding>
                 <element signature="e#63#74#0" expanded="true" />
               </folding>
@@ -187,12 +187,12 @@
         <option value="$PROJECT_DIR$/qr_test.py" />
         <option value="$PROJECT_DIR$/MerkleTree.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/README.MD" />
         <option value="$PROJECT_DIR$/blockchain.md" />
         <option value="$PROJECT_DIR$/MerkleTrace.py" />
         <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/src/MerkleTrace.py" />
         <option value="$PROJECT_DIR$/src/deploy_contract.py" />
+        <option value="$PROJECT_DIR$/README.MD" />
       </list>
     </option>
   </component>
@@ -687,14 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.MD">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="36" column="23" lean-forward="false" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
@@ -752,11 +744,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/deploy_contract.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="976">
-          <caret line="66" column="46" lean-forward="true" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="46" />
+        <state relative-caret-position="396">
+          <caret line="18" column="66" lean-forward="true" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
           <folding>
             <element signature="e#63#74#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.MD">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="43" column="32" lean-forward="false" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>

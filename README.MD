@@ -37,12 +37,12 @@
 - **index.html** : 前端页面
 - *61.html* : index的copy，但是全部操作通过61节点
 ### MerkleTrace
-- **config.yaml** : 存放用户名、合约地址等信息，会在合约部署的时候自动写入
-- **deploy_contract.py** : 专门用来部署合约的类
-- **MerkleTrace.py** :后端系统API
-- **MerkleTrace.sol** :智能合约
-- **MerkleTree.py** :MerkleTree 计算类
-- **bc_utils.py qr_utils query_utils** :一些可复用的工具函数
+- **config/config.yaml** : 存放用户名、合约地址等信息，会在合约部署的时候自动写入
+- **src/deploy_contract.py** : 专门用来部署合约的类
+- **src/MerkleTree.py** :MerkleTree 计算类
+- **smartContrace/MerkleTrace.sol** :智能合约
+- **MerkleTraceRun.py** :后端系统API
+- **utils/bc_utils.py qr_utils query_utils** :一些可复用的工具函数
 详见代码注释
 ## 架构设计（简略版）
 1.
