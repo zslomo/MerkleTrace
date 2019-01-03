@@ -1,7 +1,7 @@
 # coding=utf-8
 
 # API
-from query_utils import _verify, _compute
+from utils.query_utils import _verify, _compute
 
 __author__ = "Bin Tan"
 __date__ = " 2018.12.28"
@@ -10,10 +10,11 @@ from flask import Flask, jsonify, request, send_file
 from flask_cors import CORS
 import qrcode
 from io import BytesIO
-from bc_utils import _get_path, _get_first_time, \
+from utils.bc_utils import _get_path, _get_first_time, \
     _get_last_time, _add_path, _add_item
-from deploy_contract import Deploy
-from qr_utils import _qr_decode_one_file, _qr_decode_all_file
+from src.deploy_contract import Deploy
+from utils.qr_utils import _qr_decode_one_file
+
 app = Flask(__name__)
 # cross origin
 CORS(app, supports_credentials=True)
@@ -35,7 +36,7 @@ def deploy_contract():
     required = ['address', 'passwd', 'url']
     if not all(k in values for k in required):
         return 'Missing values', 400
-    contract_file = './MerkleTrace.sol'
+    contract_file = './smartContract/MerkleTrace.sol'
     deploy_obj = Deploy(address=values['address'],
                         passwd=values['passwd'],
                         url=values['url'],

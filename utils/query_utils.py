@@ -1,5 +1,5 @@
-from MerkleTree import MerkleTree
-from qr_utils import _qr_decode_all_file, _qr_decode_one_file
+from MerkleTreeRun import MerkleTree
+from utils.qr_utils import _qr_decode_all_file, _qr_decode_one_file
 
 
 def _verify(url, merkle_root_img):

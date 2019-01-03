@@ -1,8 +1,9 @@
-from bc_utils import _get_first_time
-import time
-import math
-from queue import Queue
 import hashlib
+import math
+import time
+from queue import Queue
+
+from utils.bc_utils import _get_first_time
 
 
 class MerkleTree():

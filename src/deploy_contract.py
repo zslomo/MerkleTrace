@@ -59,11 +59,11 @@ class Deploy():
             print('writing contract config...')
             contract_tx_receipt = w3.eth.getTransactionReceipt(tx_hash)
             contractAddress = contract_tx_receipt.contractAddress
-            with open('./config.yaml','r') as yaml_file:
+            with open('./config/config.yaml','r') as yaml_file:
                 yaml_data = yaml.load(yaml_file)
             yaml_data['contract']['address'] = contractAddress
             yaml_data['contract']['abi'] = contract_interface['abi']
-            with open('./config.yaml', 'w') as yaml_file:
+            with open('./config/config.yaml', 'w') as yaml_file:
                 yaml.dump(yaml_data,yaml_file)
             return 'contract address is {}'.format(contractAddress)
         except Exception as e:

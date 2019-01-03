@@ -3,7 +3,7 @@ import time
 import yaml
 from web3 import Web3, HTTPProvider
 
-from qr_utils import _qr_decode_all_file, _qr_decode_one_file
+from utils.qr_utils import _qr_decode_one_file
 
 
 def login(url):
