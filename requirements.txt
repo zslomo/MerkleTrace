@@ -21,7 +21,7 @@ urllib3==1.26.5
 web3==4.8.2
 webencodings==0.5.1
 websockets==6.0
-Werkzeug==0.14.1
+Werkzeug==0.15.3
 zxing==0.9.3
 qrcode-6.0
 
