@@ -14,7 +14,7 @@ kiwisolver==1.0.1
 lesscpy==0.13.0
 lru-dict==1.1.6
 py-solc==3.2.0
-PyYAML==3.13
+PyYAML==5.4
 requests==2.21.0
 traitlets==4.3.2
 urllib3==1.26.5
